@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: black !important;
+    font-family: "Poppins", sans-serif !important;
+}
+.navbar{
+    position: sticky !important;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 0.5rem 0.5rem ; 
+    background-color: black !important;
+}
+.navbar .navbar-brand{
+    font-size: 25px;
+    font-weight: 500;
+    color: yellow !important;
+}
+#navbarSupportedContent a{
+    color: white !important;
+    position: relative;
+    transition: yellow 0.3s ease;
+}
+.navbar a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: yellow;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+.navbar a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+/*home*/
+#hero-text{
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+#hero-img{
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+@media only screen and (max-width: 480px) {
+    #hero-img{
+        display: none;
+    }
+    #hero{
+        min-height: 100vh;
+        background:linear-gradient(rgba(0,0,0,0.1),rgba(0, 0, 0,0.1)),url(./images/img-2.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+
+ }
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    #hero-img{
+        display: none;
+    }
+    #hero{
+        min-height: 100vh;
+        background:linear-gradient(rgba(0,0,0,0.7),rgba(0, 0, 0,0.7)),url(./images/img-2.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+
+ }
+.hero-p{
+    color: white;
+    font-size: 1.5rem;
+}
+.hero-h1{
+    color: white;
+    font-size: 3rem;
+    padding: 10px 0;
+}
+.hero-h1 span{
+    color: yellow;
+}
+/**about**/
+#about{
+    padding: 250px 0;
+}
+.about-heading{
+    color: yellow;
+    font-weight: 400;
+    font-size: 2.5rem;
+    padding-top: 80px;
+}
+.about-skills{
+    color: red;
+    font-size: 2rem;
+    font-weight: 300;
+}
+.about-p{
+    font-size: 1.5rem;
+    font-weight: 200;
+    color: #eeeeee;
+}
+.about-p span{
+    color: yellow;
+    font-weight: 300;
+}
+
+/**education**/
+#education{
+    color: #eeeeee;
+}
+
+.e-y{
+    color: red;
+    font-size: 2rem;
+    font-weight: 500;
+    padding-bottom:15px;
+}
+
+/*projects*/
+    #projects {
+        background-color: black;
+        color: #eeeeee;
+        padding: 40px 0;
+    }
+    .project-card {
+        background-color: black !important;
+        color: #eeeeee !important;
+    }
+    .p-title {
+        font-size: 2.5rem;
+        color: yellow;
+        font-weight: bold;
+        position: relative;
+    }
+    
+    .p-title::after {
+        content: "";
+        width: 60px;
+        height: 4px;
+        background-color: red;
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .p-p {
+        font-size: 1.2rem;
+        color: #eeeeee;
+        margin-bottom: 30px;
+    }
+    
+    /* Card Styles */
+    .card, .project-card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: black;
+        border: none;
+        border-radius: 15px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .card:hover, .project-card:hover {
+        transform: translateY(-10px);
+    }
+    
+    .card-img-top {
+        height: 200px !important;
+        object-fit: cover;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+    
+    .card-body {
+        padding: 20px;
+        flex-grow: 1;
+    }
+    
+    .project-title {
+        font-size: 1.5rem;
+        color: yellow;
+        margin-bottom: 15px;
+        transition: color 0.3s ease;
+    }
+    
+    .project-title:hover {
+        color: red;
+    }
+    
+    .project-details {
+        list-style: none;
+        padding-left: 0;
+        color: #eeeeee;
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+    }
+    
+    .project-details li {
+        margin-bottom: 10px;
+    }
+    
+    .links a {
+        color: red;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    
+    .links a:hover {
+        color: blue;
+    }
+    
+    /* Media Queries */
+    @media (max-width: 768px) {
+        .p-title {
+            font-size: 2rem;
+        }
+    
+        .p-p {
+            font-size: 1rem;
+        }
+    
+        .project-card {
+            margin-bottom: 30px;
+        }
+    }
+/**skills**/
+.skills-sh{
+    color: #eeeeee;
+    font-weight: 400;
+}
+.progress-bar{
+    background-color:red !important;
+}
+/**contact**/
+.icon-con{
+    font-size: 2.5rem;
+    color: red;
+}
+.contact-heading{
+    color: yellow;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.contact-link{
+    text-decoration: none;
+    color: #eeeeee;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+.contact-link:hover{
+    color: blue;
+}
+/**footer**/
+footer {
+    background-color: red;
+    color:black;
+    padding: 40px 0;
+}
+.footer a {
+    color: black;
+    text-decoration: none;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+.footer .social-icons a {
+    margin: 0 10px;
+    font-size: 1.5em;
+}
+.footer .social-icons a:hover {
+    color: blue;
+}
